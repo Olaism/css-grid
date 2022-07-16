@@ -1,0 +1,157 @@
+body {
+    margin: 0;
+}
+
+ul,
+li {
+    padding: 0;
+    list-style: none;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    /* column-gap: 30px; */
+}
+
+header {
+    border-bottom: 1px solid#ddd;
+    text-align: center;
+}
+
+nav {
+    padding: 15px 30px;
+    border-bottom: 1px solid #ddd;
+}
+
+nav p {
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+nav li {
+    text-decoration: underline;
+    margin: 5px;
+    margin-left: 0;
+    display: inline-block;
+}
+
+article {
+    padding: 20px;
+}
+
+article h2 {
+    font-size: 2rem;
+    max-width: 800px;
+}
+
+article img {
+    width: 100%;
+}
+
+article p {
+    line-height: 2em;
+    color: #777;
+}
+
+aside {
+    padding: 20px;
+    padding-top: 0;
+    border-top: 1px solid #ddd;
+}
+
+aside ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 10px;
+}
+
+aside p {
+    margin: 0;
+    margin-top: 5px;
+}
+
+footer {
+    text-align: center;
+    padding: 30px;
+    border-top: 1px solid #ddd;
+    background: #ddd;
+}
+
+/* Responsive Design */
+
+@media screen and (min-width: 500px) {
+    article h2 {
+        font-size: 2.8rem;
+    }
+
+    .grid-container {
+        grid-template-columns: 2fr 1fr;
+        column-gap: 20px;
+        align-items: baseline;
+    }
+
+    header {
+        grid-column: span 2;
+    }
+
+    nav {
+        grid-column: span 2;
+    }
+
+    aside {
+        border-top: 0;
+        border-left: 1px solid #ddd;
+    }
+
+    aside ul {
+        display: initial;
+    }
+    
+    aside li {
+        margin-top: 15px;
+    }
+
+    footer {
+        grid-column: span 2;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .grid-container {
+        grid-template-columns: 1fr 3fr 1fr;
+        column-gap: 30px;
+        align-items: initial;
+    }
+
+    header {
+        grid-column: span 3;
+    }
+
+    nav {
+        padding: 30px;
+        grid-column: span 1;
+        border-bottom: 0;
+        border-right: 1px solid #ddd;
+    }
+
+    article {
+        padding: 30px;
+        grid-column: span 1;
+    }
+
+    article h2 {
+        font-size: 3.5rem;
+        margin-top: 0;
+    }
+
+    aside {
+        padding: 30px;
+        grid-column: span 1;
+    }
+
+    footer {
+        grid-column: span 3;
+    }
+}
